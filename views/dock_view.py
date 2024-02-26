@@ -127,4 +127,4 @@ def create_dock(dock_data):
             "capacity": new_dock[2],
         }
 
-        return dock_dict if dock_dict else None
+    return dock_dict if dock_dict else None

@@ -130,4 +130,4 @@ def create_ship(ship_data):
             "hauler_id": new_ship[2],
         }
 
-        return ship_dict if ship_dict else None
+    return ship_dict if ship_dict else None

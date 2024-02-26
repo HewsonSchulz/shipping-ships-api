@@ -129,4 +129,4 @@ def create_hauler(hauler_data):
             "dock_id": new_hauler[2],
         }
 
-        return hauler_dict if hauler_dict else None
+    return hauler_dict if hauler_dict else None
