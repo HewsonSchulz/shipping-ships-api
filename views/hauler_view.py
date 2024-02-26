@@ -30,8 +30,8 @@ def delete_hauler(pk):
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        DELETE FROM Hauler WHERE id = ?
-        """,
+            DELETE FROM Hauler WHERE id = ?
+            """,
             (pk,),
         )
         number_of_rows_deleted = db_cursor.rowcount
@@ -48,12 +48,12 @@ def list_haulers():
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        SELECT
-            h.id,
-            h.name,
-            h.dock_id
-        FROM Hauler h
-        """
+            SELECT
+                h.id,
+                h.name,
+                h.dock_id
+            FROM Hauler h
+            """
         )
         query_results = db_cursor.fetchall()
 
@@ -77,13 +77,13 @@ def retrieve_hauler(pk):
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        SELECT
-            h.id,
-            h.name,
-            h.dock_id
-        FROM Hauler h
-        WHERE h.id = ?
-        """,
+            SELECT
+                h.id,
+                h.name,
+                h.dock_id
+            FROM Hauler h
+            WHERE h.id = ?
+            """,
             (pk,),
         )
         query_results = db_cursor.fetchone()

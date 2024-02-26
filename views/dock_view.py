@@ -28,8 +28,8 @@ def delete_dock(pk):
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        DELETE FROM Dock WHERE id = ?
-        """,
+            DELETE FROM Dock WHERE id = ?
+            """,
             (pk,),
         )
         number_of_rows_deleted = db_cursor.rowcount
@@ -46,12 +46,12 @@ def list_docks():
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        SELECT
-            d.id,
-            d.location,
-            d.capacity
-        FROM Dock d
-        """
+            SELECT
+                d.id,
+                d.location,
+                d.capacity
+            FROM Dock d
+            """
         )
         query_results = db_cursor.fetchall()
 
@@ -75,13 +75,13 @@ def retrieve_dock(pk):
         # Write the SQL query to get the information you want
         db_cursor.execute(
             """
-        SELECT
-            d.id,
-            d.location,
-            d.capacity
-        FROM Dock d
-        WHERE d.id = ?
-        """,
+            SELECT
+                d.id,
+                d.location,
+                d.capacity
+            FROM Dock d
+            WHERE d.id = ?
+            """,
             (pk,),
         )
         query_results = db_cursor.fetchone()
